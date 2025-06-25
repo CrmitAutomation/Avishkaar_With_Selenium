@@ -18,6 +18,6 @@ public class logoutTest extends baseTest {
 		logoutPage.clickLogoutButton();
 
 		// Confirmation
-		System.out.println("Successfully Loggedout");
+		System.out.println("Successfully Logged out");
 	}
 }

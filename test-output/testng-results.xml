@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-20T20:13:15 IST" name="TimesheetSuite" finished-at="2025-06-20T20:15:26 IST" duration-ms="131199">
+  <suite started-at="2025-06-23T15:56:16 IST" name="TimesheetSuite" finished-at="2025-06-23T15:58:34 IST" duration-ms="138089">
     <groups>
     </groups>
-    <test started-at="2025-06-20T20:13:15 IST" name="Employee Timesheet Flow" finished-at="2025-06-20T20:14:26 IST" duration-ms="71708">
+    <test started-at="2025-06-23T15:56:16 IST" name="Employee Timesheet Flow" finished-at="2025-06-23T15:57:33 IST" duration-ms="77415">
       <class name="testcases.logoutTest">
-        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.logoutTest@6f45df59]" started-at="2025-06-20T20:14:22 IST" name="createTestReport" finished-at="2025-06-20T20:14:22 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.logoutTest@6f45df59]" started-at="2025-06-23T15:57:29 IST" name="createTestReport" finished-at="2025-06-23T15:57:29 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestReport -->
-        <test-method signature="testLogout()[pri:0, instance:testcases.logoutTest@6f45df59]" started-at="2025-06-20T20:14:22 IST" name="testLogout" finished-at="2025-06-20T20:14:26 IST" duration-ms="4322" status="PASS">
+        <test-method signature="testLogout()[pri:0, instance:testcases.logoutTest@6f45df59]" started-at="2025-06-23T15:57:29 IST" name="testLogout" finished-at="2025-06-23T15:57:33 IST" duration-ms="4296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
-        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.logoutTest@6f45df59]" started-at="2025-06-20T20:14:26 IST" name="logTestResult" finished-at="2025-06-20T20:14:26 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.logoutTest@6f45df59]" started-at="2025-06-23T15:57:33 IST" name="logTestResult" finished-at="2025-06-23T15:57:33 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,7 +35,7 @@
         </test-method> <!-- logTestResult -->
       </class> <!-- testcases.logoutTest -->
       <class name="testcases.timesheetTest">
-        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.timesheetTest@58ea606c]" started-at="2025-06-20T20:13:23 IST" name="createTestReport" finished-at="2025-06-20T20:13:23 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.timesheetTest@58ea606c]" started-at="2025-06-23T15:56:24 IST" name="createTestReport" finished-at="2025-06-23T15:56:24 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,11 +46,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestReport -->
-        <test-method signature="testCreateTimesheet()[pri:0, instance:testcases.timesheetTest@58ea606c]" started-at="2025-06-20T20:13:23 IST" name="testCreateTimesheet" finished-at="2025-06-20T20:14:22 IST" duration-ms="59050" status="PASS">
+        <test-method signature="testCreateTimesheet()[pri:0, instance:testcases.timesheetTest@58ea606c]" started-at="2025-06-23T15:56:24 IST" name="testCreateTimesheet" finished-at="2025-06-23T15:57:29 IST" duration-ms="64826" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateTimesheet -->
-        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.timesheetTest@58ea606c]" started-at="2025-06-20T20:14:22 IST" name="logTestResult" finished-at="2025-06-20T20:14:22 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.timesheetTest@58ea606c]" started-at="2025-06-23T15:57:29 IST" name="logTestResult" finished-at="2025-06-23T15:57:29 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -63,7 +63,7 @@
         </test-method> <!-- logTestResult -->
       </class> <!-- testcases.timesheetTest -->
       <class name="testcases.loginTest">
-        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.loginTest@37883b97]" started-at="2025-06-20T20:13:15 IST" name="createTestReport" finished-at="2025-06-20T20:13:15 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.loginTest@37883b97]" started-at="2025-06-23T15:56:16 IST" name="createTestReport" finished-at="2025-06-23T15:56:16 IST" duration-ms="12" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -74,11 +74,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestReport -->
-        <test-method signature="testLogin()[pri:0, instance:testcases.loginTest@37883b97]" started-at="2025-06-20T20:13:15 IST" name="testLogin" finished-at="2025-06-20T20:13:23 IST" duration-ms="8244" status="PASS">
+        <test-method signature="testLogin()[pri:0, instance:testcases.loginTest@37883b97]" started-at="2025-06-23T15:56:16 IST" name="testLogin" finished-at="2025-06-23T15:56:24 IST" duration-ms="8201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.loginTest@37883b97]" started-at="2025-06-20T20:13:23 IST" name="logTestResult" finished-at="2025-06-20T20:13:23 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.loginTest@37883b97]" started-at="2025-06-23T15:56:24 IST" name="logTestResult" finished-at="2025-06-23T15:56:24 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -91,9 +91,9 @@
         </test-method> <!-- logTestResult -->
       </class> <!-- testcases.loginTest -->
     </test> <!-- Employee Timesheet Flow -->
-    <test started-at="2025-06-20T20:14:26 IST" name="Manager Approval Flow" finished-at="2025-06-20T20:15:26 IST" duration-ms="59405">
+    <test started-at="2025-06-23T15:57:33 IST" name="Manager Approval Flow" finished-at="2025-06-23T15:58:34 IST" duration-ms="60577">
       <class name="testcases.logoutTest">
-        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.logoutTest@5552768b]" started-at="2025-06-20T20:15:22 IST" name="createTestReport" finished-at="2025-06-20T20:15:22 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.logoutTest@5552768b]" started-at="2025-06-23T15:58:30 IST" name="createTestReport" finished-at="2025-06-23T15:58:30 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -104,11 +104,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestReport -->
-        <test-method signature="testLogout()[pri:0, instance:testcases.logoutTest@5552768b]" started-at="2025-06-20T20:15:22 IST" name="testLogout" finished-at="2025-06-20T20:15:26 IST" duration-ms="4238" status="PASS">
+        <test-method signature="testLogout()[pri:0, instance:testcases.logoutTest@5552768b]" started-at="2025-06-23T15:58:30 IST" name="testLogout" finished-at="2025-06-23T15:58:34 IST" duration-ms="4288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
-        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.logoutTest@5552768b]" started-at="2025-06-20T20:15:26 IST" name="logTestResult" finished-at="2025-06-20T20:15:26 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.logoutTest@5552768b]" started-at="2025-06-23T15:58:34 IST" name="logTestResult" finished-at="2025-06-23T15:58:34 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -121,7 +121,11 @@
         </test-method> <!-- logTestResult -->
       </class> <!-- testcases.logoutTest -->
       <class name="testcases.managerTimesheetApprovalTest">
-        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.managerTimesheetApprovalTest@671a5887]" started-at="2025-06-20T20:14:45 IST" name="createTestReport" finished-at="2025-06-20T20:14:45 IST" duration-ms="2" status="PASS">
+        <test-method signature="approveTimesheet()[pri:0, instance:testcases.managerTimesheetApprovalTest@671a5887]" started-at="2025-06-23T15:57:46 IST" name="approveTimesheet" finished-at="2025-06-23T15:58:30 IST" duration-ms="43391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- approveTimesheet -->
+        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.managerTimesheetApprovalTest@671a5887]" started-at="2025-06-23T15:57:46 IST" name="createTestReport" finished-at="2025-06-23T15:57:46 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -132,11 +136,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestReport -->
-        <test-method signature="approveTimesheet()[pri:0, instance:testcases.managerTimesheetApprovalTest@671a5887]" started-at="2025-06-20T20:14:45 IST" name="approveTimesheet" finished-at="2025-06-20T20:15:22 IST" duration-ms="36929" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- approveTimesheet -->
-        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.managerTimesheetApprovalTest@671a5887]" started-at="2025-06-20T20:15:22 IST" name="logTestResult" finished-at="2025-06-20T20:15:22 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.managerTimesheetApprovalTest@671a5887]" started-at="2025-06-23T15:58:30 IST" name="logTestResult" finished-at="2025-06-23T15:58:30 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -149,11 +149,11 @@
         </test-method> <!-- logTestResult -->
       </class> <!-- testcases.managerTimesheetApprovalTest -->
       <class name="testcases.managerLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-20T20:13:01 IST" name="setUp" finished-at="2025-06-20T20:13:15 IST" duration-ms="13407" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-23T15:55:54 IST" name="setUp" finished-at="2025-06-23T15:56:16 IST" duration-ms="21326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-20T20:14:26 IST" name="createTestReport" finished-at="2025-06-20T20:14:26 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="createTestReport(java.lang.reflect.Method)[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-23T15:57:33 IST" name="createTestReport" finished-at="2025-06-23T15:57:33 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -164,11 +164,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestReport -->
-        <test-method signature="testManagerLogin()[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-20T20:14:26 IST" name="testManagerLogin" finished-at="2025-06-20T20:14:45 IST" duration-ms="18219" status="PASS">
+        <test-method signature="testManagerLogin()[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-23T15:57:33 IST" name="testManagerLogin" finished-at="2025-06-23T15:57:46 IST" duration-ms="12880" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testManagerLogin -->
-        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-20T20:14:45 IST" name="logTestResult" finished-at="2025-06-20T20:14:45 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-23T15:57:46 IST" name="logTestResult" finished-at="2025-06-23T15:57:46 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -179,7 +179,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logTestResult -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-20T20:15:26 IST" name="tearDown" finished-at="2025-06-20T20:15:30 IST" duration-ms="3874" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.managerLoginTest@87a85e1]" started-at="2025-06-23T15:58:34 IST" name="tearDown" finished-at="2025-06-23T15:58:38 IST" duration-ms="3841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -38,7 +38,7 @@ public class managerTimesheetPage {
         driver.findElement(listViewButton).click();
         Thread.sleep(2000);
         driver.findElement(pendingForApprovalDropDown).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 
     public String getTimesheetApprovalLink() throws InterruptedException {

@@ -1,8 +1,9 @@
 package testcases;
 
-import base.baseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import base.baseTest;
 import pages.managerTimesheetPage;
 
 public class managerTimesheetApprovalTest extends baseTest {
@@ -33,5 +34,8 @@ public class managerTimesheetApprovalTest extends baseTest {
 
         // Assert the status is "Approved"
         Assert.assertEquals(actualStatus.trim(), "Approved", "Timesheet approval status did not match.");
+        
+        //confirmation message
+        System.out.println("Timesheet is successful approved by your Manager");
     }
 }

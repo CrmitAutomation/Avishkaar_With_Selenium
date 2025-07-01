@@ -55,6 +55,16 @@ public class ExtentReportUtil {
     public static void flushReport() {
         if (extent != null) {
             extent.flush();
+            
+         // Ensure the index.html is created after flushing
+            try {
+                String reportDir = System.getProperty("user.dir") + "/reports";
+                File latestReport = new File(reportPath);
+                File jenkinsIndex = new File(reportDir + "/index.html");
+                Files.copy(latestReport.toPath(), jenkinsIndex.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            } catch (IOException e) {
+                e.printStackTrace();
         }
     }
+  }
 }

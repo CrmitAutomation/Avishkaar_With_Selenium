@@ -1,9 +1,6 @@
 package utils;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -15,20 +12,19 @@ public class ExtentReportUtil {
 
     private static ExtentReports extent;
     private static ExtentTest test;
-    private static String reportPath;
 
     public static ExtentReports getReportInstance() {
         if (extent == null) {
             try {
-                // Timestamped report for unique archive
+                // Timestamp for folder
                 String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-                String reportDir = System.getProperty("user.dir") + "/reports";
+                String reportDir = System.getProperty("user.dir") + "/reports/" + timestamp;
                 File dir = new File(reportDir);
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
 
-                reportPath = reportDir + "/ExtentReport_" + timestamp + ".html";
+                String reportPath = reportDir + "/ExtentReport.html";
                 ExtentSparkReporter reporter = new ExtentSparkReporter(reportPath);
                 reporter.config().setDocumentTitle("Automation Test Report");
                 reporter.config().setReportName("Test Execution Report");
@@ -36,11 +32,7 @@ public class ExtentReportUtil {
                 extent = new ExtentReports();
                 extent.attachReporter(reporter);
 
-                // Optional: Also copy this as index.html for Jenkins
-                String jenkinsIndex = reportDir + "/index.html";
-                Files.copy(new File(reportPath).toPath(), new File(jenkinsIndex).toPath(), StandardCopyOption.REPLACE_EXISTING);
-
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -55,16 +47,6 @@ public class ExtentReportUtil {
     public static void flushReport() {
         if (extent != null) {
             extent.flush();
-            
-         // Ensure the index.html is created after flushing
-            try {
-                String reportDir = System.getProperty("user.dir") + "/reports";
-                File latestReport = new File(reportPath);
-                File jenkinsIndex = new File(reportDir + "/index.html");
-                Files.copy(latestReport.toPath(), jenkinsIndex.toPath(), StandardCopyOption.REPLACE_EXISTING);
-            } catch (IOException e) {
-                e.printStackTrace();
         }
     }
-  }
 }

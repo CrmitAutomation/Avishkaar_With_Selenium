@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-TimesheetSuite" class="navigator-link">
-              <span class="suite-name border-passed">TimesheetSuite</span>
+              <span class="suite-name border-failed">TimesheetSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TimesheetSuite" class="hide-methods failed suite-TimesheetSuite"> (hide)</a> <!-- hide-methods failed suite-TimesheetSuite -->
+                      <a href="#" panel-name="suite-TimesheetSuite" class="show-methods failed suite-TimesheetSuite"> (show)</a> <!-- show-methods failed suite-TimesheetSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-TimesheetSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TimesheetSuite" title="testcases.managerTimesheetApprovalTest" class="method navigator-link" hash-for-method="approveTimesheet">approveTimesheet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TimesheetSuite" title="testcases.timesheetTest" class="method navigator-link" hash-for-method="testCreateTimesheet">testCreateTimesheet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TimesheetSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,16 +120,6 @@
                       <a href="#" panel-name="suite-TimesheetSuite" class="show-methods passed suite-TimesheetSuite"> (show)</a> <!-- show-methods passed suite-TimesheetSuite -->
                     </span>
                     <div class="method-list-content passed suite-TimesheetSuite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TimesheetSuite" title="testcases.managerTimesheetApprovalTest" class="method navigator-link" hash-for-method="approveTimesheet">approveTimesheet</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TimesheetSuite" title="testcases.timesheetTest" class="method navigator-link" hash-for-method="testCreateTimesheet">testCreateTimesheet</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-TimesheetSuite" title="testcases.loginTest" class="method navigator-link" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
@@ -143,21 +152,86 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TimesheetSuite" class="panel TimesheetSuite">
-          <div class="suite-TimesheetSuite-class-passed">
+          <div class="suite-TimesheetSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.managerLoginTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.timesheetTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testManagerLogin">
-                  </a> <!-- testManagerLogin -->
-                  <span class="method-name">testManagerLogin</span>
+                  <a name="testCreateTimesheet">
+                  </a> <!-- testCreateTimesheet -->
+                  <span class="method-name">testCreateTimesheet</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//lightning-base-combobox-item[@data-value=&apos;QA&apos;]&quot;}
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c26407a0787f56c4d22faff2bcf13047, findElement {value=//lightning-base-combobox-item[@data-value=&apos;QA&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49794}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49794/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c26407a0787f56c4d22faff2bcf13047
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pages.timesheetPage.fillProjectCategory(timesheetPage.java:54)
+	at testcases.timesheetTest.testCreateTimesheet(timesheetTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TimesheetSuite-class-passed -->
+          </div> <!-- suite-TimesheetSuite-class-failed -->
+          <div class="suite-TimesheetSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.managerTimesheetApprovalTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="approveTimesheet">
+                  </a> <!-- approveTimesheet -->
+                  <span class="method-name">approveTimesheet</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody[@class=&apos;slds-scrollable_y&apos;]//a&quot;}
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c26407a0787f56c4d22faff2bcf13047, findElement {value=//tbody[@class=&apos;slds-scrollable_y&apos;]//a, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49794}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49794/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c26407a0787f56c4d22faff2bcf13047
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pages.managerTimesheetPage.getTimesheetApprovalLink(managerTimesheetPage.java:45)
+	at testcases.managerTimesheetApprovalTest.approveTimesheet(managerTimesheetApprovalTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TimesheetSuite-class-failed -->
           <div class="suite-TimesheetSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -169,36 +243,6 @@
                   <a name="testLogin">
                   </a> <!-- testLogin -->
                   <span class="method-name">testLogin</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TimesheetSuite-class-passed -->
-          <div class="suite-TimesheetSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.managerTimesheetApprovalTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="approveTimesheet">
-                  </a> <!-- approveTimesheet -->
-                  <span class="method-name">approveTimesheet</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TimesheetSuite-class-passed -->
-          <div class="suite-TimesheetSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.timesheetTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testCreateTimesheet">
-                  </a> <!-- testCreateTimesheet -->
-                  <span class="method-name">testCreateTimesheet</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -225,6 +269,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-TimesheetSuite-class-passed -->
+          <div class="suite-TimesheetSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.managerLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testManagerLogin">
+                  </a> <!-- testManagerLogin -->
+                  <span class="method-name">testManagerLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TimesheetSuite-class-passed -->
         </div> <!-- panel TimesheetSuite -->
         <div panel-name="test-xml-TimesheetSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -235,6 +294,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;TimesheetSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.TestListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Employee Timesheet Flow&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.loginTest&quot;/&gt;
@@ -293,27 +355,27 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testCreateTimesheet')
 data.setCell(0, 2, 'testcases.timesheetTest')
-data.setCell(0, 3, 64826);
+data.setCell(0, 3, 63321);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'approveTimesheet')
 data.setCell(1, 2, 'testcases.managerTimesheetApprovalTest')
-data.setCell(1, 3, 43391);
+data.setCell(1, 3, 38347);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testManagerLogin')
 data.setCell(2, 2, 'testcases.managerLoginTest')
-data.setCell(2, 3, 12880);
+data.setCell(2, 3, 17250);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testLogin')
 data.setCell(3, 2, 'testcases.loginTest')
-data.setCell(3, 3, 8201);
+data.setCell(3, 3, 7095);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'testLogout')
 data.setCell(4, 2, 'testcases.logoutTest')
-data.setCell(4, 3, 4296);
+data.setCell(4, 3, 4292);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'testLogout')
 data.setCell(5, 2, 'testcases.logoutTest')
-data.setCell(5, 3, 4288);
+data.setCell(5, 3, 4223);
 window.suiteTableData['TimesheetSuite']= { tableData: data, tableDiv: 'times-div-TimesheetSuite'}
 return data;
 }
@@ -337,11 +399,15 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testcases.managerTimesheetApprovalTest</span>
+              <span class="ignored-class-name">testcases.logoutTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setUp</span>
                 <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUp</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -355,12 +421,8 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testcases.logoutTest</span>
+              <span class="ignored-class-name">testcases.managerTimesheetApprovalTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-                <span class="ignored-method-name">setUp</span>
-                <br/>
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
                 <span class="ignored-method-name">setUp</span>
@@ -385,97 +447,77 @@ return data;
               <div class="chronological-class-name">testcases.loginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createTestReport(public void testcases.loginTest.testLogin() throws java.lang.InterruptedException,java.io.IOExceptio...)</span>
-                <span class="method-start">21380 ms</span>
+                <span class="method-start">19462 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogin</span>
-                <span class="method-start">21393 ms</span>
+                <span class="method-start">19468 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logTestResult([TestResult name=testLogin status=SUCCESS method=loginTest.testLogin()[pri:0, instance:testcases.log...)</span>
-                <span class="method-start">29600 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.timesheetTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createTestReport(public void testcases.timesheetTest.testCreateTimesheet() throws java.lang.Exception)</span>
-                <span class="method-start">29610 ms</span>
+                <span class="method-start">26575 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testCreateTimesheet</span>
-                <span class="method-start">29611 ms</span>
+                <span class="method-start">26576 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logTestResult([TestResult name=testCreateTimesheet status=SUCCESS method=timesheetTest.testCreateTimesheet()[pri:0...)</span>
-                <span class="method-start">94439 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.logoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createTestReport(public void testcases.logoutTest.testLogout() throws java.lang.InterruptedException)</span>
-                <span class="method-start">94442 ms</span>
+                <span class="method-start">90149 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogout</span>
-                <span class="method-start">94443 ms</span>
+                <span class="method-start">90150 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logTestResult([TestResult name=testLogout status=SUCCESS method=logoutTest.testLogout()[pri:0, instance:testcases....)</span>
-                <span class="method-start">98741 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.managerLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createTestReport(public void testcases.managerLoginTest.testManagerLogin() throws java.lang.Exception)</span>
-                <span class="method-start">98844 ms</span>
+                <span class="method-start">94700 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testManagerLogin</span>
-                <span class="method-start">98845 ms</span>
+                <span class="method-start">94701 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logTestResult([TestResult name=testManagerLogin status=SUCCESS method=managerLoginTest.testManagerLogin()[pri:0, i...)</span>
-                <span class="method-start">111728 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.managerTimesheetApprovalTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createTestReport(public void testcases.managerTimesheetApprovalTest.approveTimesheet() throws java.lang.Exception)</span>
-                <span class="method-start">111730 ms</span>
+                <span class="method-start">111953 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">approveTimesheet</span>
-                <span class="method-start">111730 ms</span>
+                <span class="method-start">111954 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logTestResult([TestResult name=approveTimesheet status=SUCCESS method=managerTimesheetApprovalTest.approveTimeshee...)</span>
-                <span class="method-start">155123 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.logoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createTestReport(public void testcases.logoutTest.testLogout() throws java.lang.InterruptedException)</span>
-                <span class="method-start">155125 ms</span>
+                <span class="method-start">150573 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogout</span>
-                <span class="method-start">155126 ms</span>
+                <span class="method-start">150573 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logTestResult([TestResult name=testLogout status=SUCCESS method=logoutTest.testLogout()[pri:0, instance:testcases....)</span>
-                <span class="method-start">159416 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.managerLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">159490 ms</span>
+                <span class="method-start">154976 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

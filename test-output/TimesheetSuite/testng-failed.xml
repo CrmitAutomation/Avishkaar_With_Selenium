@@ -1,66 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [TimesheetSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listeners.TestListener"/>
+  </listeners>
   <test thread-count="5" name="Employee Timesheet Flow(failed)">
     <classes>
-      <class name="testcases.loginTest">
-        <methods>
-          <include name="testLogin"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="logTestResult"/>
-          <include name="createTestReport"/>
-        </methods>
-      </class> <!-- testcases.loginTest -->
       <class name="testcases.timesheetTest">
         <methods>
           <include name="testCreateTimesheet"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="logTestResult"/>
           <include name="createTestReport"/>
         </methods>
       </class> <!-- testcases.timesheetTest -->
-      <class name="testcases.logoutTest">
-        <methods>
-          <include name="testLogout"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="logTestResult"/>
-          <include name="createTestReport"/>
-        </methods>
-      </class> <!-- testcases.logoutTest -->
     </classes>
   </test> <!-- Employee Timesheet Flow(failed) -->
   <test thread-count="5" name="Manager Approval Flow(failed)">
     <classes>
-      <class name="testcases.managerLoginTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="logTestResult"/>
-          <include name="createTestReport"/>
-          <include name="testManagerLogin"/>
-        </methods>
-      </class> <!-- testcases.managerLoginTest -->
       <class name="testcases.managerTimesheetApprovalTest">
         <methods>
           <include name="tearDown"/>
-          <include name="approveTimesheet"/>
           <include name="setUp"/>
-          <include name="logTestResult"/>
+          <include name="approveTimesheet"/>
           <include name="createTestReport"/>
         </methods>
       </class> <!-- testcases.managerTimesheetApprovalTest -->
-      <class name="testcases.logoutTest">
-        <methods>
-          <include name="testLogout"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="logTestResult"/>
-          <include name="createTestReport"/>
-        </methods>
-      </class> <!-- testcases.logoutTest -->
     </classes>
   </test> <!-- Manager Approval Flow(failed) -->
 </suite> <!-- Failed suite [TimesheetSuite] -->

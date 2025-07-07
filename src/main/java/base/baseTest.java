@@ -1,6 +1,5 @@
 package base;
 
-import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -8,11 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 
 import utils.EmailUtils;
 import utils.ExtentReportUtil;
@@ -22,7 +19,6 @@ public class baseTest {
     public static WebDriver driver;
     public static Properties prop;
     public static ExtentReports extent;
-    public static ExtentTest test;
 
     @BeforeSuite
     public void setUp() {
@@ -45,17 +41,12 @@ public class baseTest {
         extent = ExtentReportUtil.getReportInstance();
     }
 
-    @BeforeMethod
-    public void createTestReport(Method method) {
-        test = extent.createTest(method.getName()); // Listener will use this
-    }
-
     @AfterSuite
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
         ExtentReportUtil.flushReport();
-        EmailUtils.sendTestReport(); // Sends latest report
+        EmailUtils.sendTestReport(); // Sends latest report via email
     }
 }

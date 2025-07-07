@@ -7,19 +7,33 @@ import org.testng.ITestResult;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.ExtentTest;
 
 import utils.ExtentReportUtil;
 import utils.ScreenshotUtils;
 
 public class TestListener implements ITestListener {
 
+    // Thread-safe ExtentTest for parallel tests (optional)
+    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+
+    @Override
+    public void onTestStart(ITestResult result) {
+        // Create test once — this avoids duplicate entries
+        ExtentTest test = ExtentReportUtil.getReportInstance().createTest(result.getMethod().getMethodName());
+        extentTest.set(test);
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        extentTest.get().pass("Test Passed");
+    }
+
     @Override
     public void onTestFailure(ITestResult result) {
-        Object currentClass = result.getInstance();
         WebDriver driver = null;
-
         try {
-            // Access the 'driver' field from superclass (baseTest)
+            Object currentClass = result.getInstance();
             java.lang.reflect.Field field = result.getTestClass().getRealClass()
                                                   .getSuperclass()
                                                   .getDeclaredField("driver");
@@ -32,21 +46,18 @@ public class TestListener implements ITestListener {
         String testName = result.getMethod().getMethodName();
         String screenshotPath = ScreenshotUtils.captureScreenshot(driver, testName);
 
-        ExtentReportUtil.createTest(testName)
-            .fail("Test Failed: " + result.getThrowable(),
-                  MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
-    }
-
-    @Override
-    public void onTestSuccess(ITestResult result) {
-        ExtentReportUtil.createTest(result.getMethod().getMethodName())
-            .pass("Test Passed");
+        try {
+            extentTest.get().fail("Test Failed: " + result.getThrowable(),
+                    MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+        } catch (Exception e) {
+            extentTest.get().fail("Test Failed, but screenshot attachment failed: " + result.getThrowable());
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        ExtentReportUtil.createTest(result.getMethod().getMethodName())
-            .skip("Test Skipped: " + result.getThrowable());
+        extentTest.get().skip("Test Skipped: " + result.getThrowable());
     }
 
     @Override

@@ -11,7 +11,6 @@
           <include name="testCreateTimesheet"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="createTestReport"/>
         </methods>
       </class> <!-- testcases.timesheetTest -->
     </classes>
@@ -23,7 +22,6 @@
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="approveTimesheet"/>
-          <include name="createTestReport"/>
         </methods>
       </class> <!-- testcases.managerTimesheetApprovalTest -->
     </classes>

@@ -75,6 +75,10 @@ public class ExtentReportUtil {
                 File jenkinsIndex = new File(reportDir + "/index.html");
                 Files.copy(reportFile.toPath(), jenkinsIndex.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
+                // Copy latest report with static name for Jenkins HTML Publisher
+                File latestNamed = new File(reportDir + "/latest.html");
+                Files.copy(reportFile.toPath(), latestNamed.toPath(), StandardCopyOption.REPLACE_EXISTING);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -17,15 +17,17 @@ public class ExtentReportUtil {
     private static ExtentReports extent;
     private static ExtentTest test;
     private static String reportPath;
-    private static String timestamp;
 
     public static ExtentReports getReportInstance() {
         if (extent == null) {
             try {
-                timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+                // Create timestamped report file
+                String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
                 String reportDir = System.getProperty("user.dir") + "/reports";
                 File dir = new File(reportDir);
-                if (!dir.exists()) dir.mkdirs();
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
 
                 reportPath = reportDir + "/ExtentReport_" + timestamp + ".html";
                 ExtentSparkReporter reporter = new ExtentSparkReporter(reportPath);
@@ -50,15 +52,25 @@ public class ExtentReportUtil {
     public static void flushReport() {
         if (extent != null) {
             extent.flush();
+
             try {
                 String reportDir = System.getProperty("user.dir") + "/reports";
                 File reportFile = new File(reportPath);
 
-                // Create Jenkins-friendly version named index.html
+                // ✅ Copy to Jenkins index.html (for latest preview)
                 File jenkinsIndex = new File(reportDir + "/index.html");
                 Files.copy(reportFile.toPath(), jenkinsIndex.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
-                // Create/append to master index file
+                // ✅ Copy to build-specific folder if BUILD_NUMBER is available (in Jenkins)
+                String buildNumber = System.getenv("BUILD_NUMBER");
+                if (buildNumber != null) {
+                    File buildDir = new File(reportDir + "/build_" + buildNumber);
+                    buildDir.mkdirs();
+                    File buildReport = new File(buildDir, "index.html");
+                    Files.copy(reportFile.toPath(), buildReport.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                }
+
+                // ✅ Append to master-index.html
                 File indexFile = new File(reportDir + "/master-index.html");
                 if (!indexFile.exists()) {
                     String header = "<html><head><title>Automation Report History</title></head><body><h2>Execution History</h2><ul>\n";
@@ -68,14 +80,6 @@ public class ExtentReportUtil {
                 String fileName = reportFile.getName();
                 String link = String.format("<li><a href='%s' target='_blank'>%s</a></li>\n", fileName, fileName);
                 Files.write(indexFile.toPath(), link.getBytes(), StandardOpenOption.APPEND);
-
-                // Optional: Copy to per-build folder if BUILD_NUMBER is set by Jenkins
-                String buildNum = System.getenv("BUILD_NUMBER");
-                if (buildNum != null) {
-                    File buildDir = new File(reportDir + "/build_" + buildNum);
-                    buildDir.mkdirs();
-                    Files.copy(reportFile.toPath(), new File(buildDir, "index.html").toPath(), StandardCopyOption.REPLACE_EXISTING);
-                }
 
             } catch (IOException e) {
                 e.printStackTrace();

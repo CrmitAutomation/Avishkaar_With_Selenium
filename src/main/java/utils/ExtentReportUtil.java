@@ -57,23 +57,29 @@ public class ExtentReportUtil {
                 String reportDir = System.getProperty("user.dir") + "/reports";
                 File reportFile = new File(reportPath);
 
-                // Master index file to list all historical reports
-                File indexFile = new File(reportDir + "/master-index.html");
+                // ✅ Copy to Jenkins index.html (for latest preview)
+                File jenkinsIndex = new File(reportDir + "/index.html");
+                Files.copy(reportFile.toPath(), jenkinsIndex.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
-                // If the file doesn't exist, create it with header
+                // ✅ Copy to build-specific folder if BUILD_NUMBER is available (in Jenkins)
+                String buildNumber = System.getenv("BUILD_NUMBER");
+                if (buildNumber != null) {
+                    File buildDir = new File(reportDir + "/build_" + buildNumber);
+                    buildDir.mkdirs();
+                    File buildReport = new File(buildDir, "index.html");
+                    Files.copy(reportFile.toPath(), buildReport.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                }
+
+                // ✅ Append to master-index.html
+                File indexFile = new File(reportDir + "/master-index.html");
                 if (!indexFile.exists()) {
                     String header = "<html><head><title>Automation Report History</title></head><body><h2>Execution History</h2><ul>\n";
                     Files.write(indexFile.toPath(), header.getBytes(), StandardOpenOption.CREATE);
                 }
 
-                // Append this run to the master index
                 String fileName = reportFile.getName();
                 String link = String.format("<li><a href='%s' target='_blank'>%s</a></li>\n", fileName, fileName);
                 Files.write(indexFile.toPath(), link.getBytes(), StandardOpenOption.APPEND);
-
-                // (Optional) Copy latest report as index.html for Jenkins quick preview (still shows latest)
-                File jenkinsIndex = new File(reportDir + "/index.html");
-                Files.copy(reportFile.toPath(), jenkinsIndex.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
             } catch (IOException e) {
                 e.printStackTrace();

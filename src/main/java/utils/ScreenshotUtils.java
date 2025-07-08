@@ -15,6 +15,8 @@ public class ScreenshotUtils {
 
     public static String captureScreenshot(WebDriver driver, String testName) {
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+        // Keep screenshots in a separate folder
         String screenshotDir = System.getProperty("user.dir") + "/screenshots";
         new File(screenshotDir).mkdirs();  // Create folder if it doesn't exist
 
@@ -26,8 +28,9 @@ public class ScreenshotUtils {
             File dest = new File(fullPath);
             FileUtils.copyFile(src, dest);
 
-            // ✅ Return absolute path to ensure image is shown in report from any location
-            return dest.getAbsolutePath();
+            // ✅ Return relative path from reports/ExtentReport.html to ../screenshots/
+            return "../screenshots/" + fileName;
+
         } catch (IOException e) {
             e.printStackTrace();
             return null;

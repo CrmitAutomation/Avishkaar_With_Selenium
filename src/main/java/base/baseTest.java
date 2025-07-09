@@ -10,6 +10,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 import utils.EmailUtils;
 import utils.ExtentReportUtil;
@@ -19,6 +20,7 @@ public class baseTest {
     public static WebDriver driver;
     public static Properties prop;
     public static ExtentReports extent;
+    public static ExtentTest extentTest; // ✅ Used in Listener for logging steps/screenshots
 
     @BeforeSuite
     public void setUp() {
@@ -26,6 +28,7 @@ public class baseTest {
         String browser = prop.getProperty("browser");
         String baseUrl = prop.getProperty("baseURL");
 
+        // Initialize driver based on browser
         if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox")) {
@@ -38,6 +41,7 @@ public class baseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(baseUrl);
 
+        // Initialize ExtentReports
         extent = ExtentReportUtil.getReportInstance();
     }
 
@@ -46,7 +50,15 @@ public class baseTest {
         if (driver != null) {
             driver.quit();
         }
+
+        // Flush the ExtentReport
         ExtentReportUtil.flushReport();
-        EmailUtils.sendTestReport(); // Sends latest report via email
+
+        // Send the latest report via email
+        try {
+            EmailUtils.sendTestReport();
+        } catch (Exception e) {
+            System.err.println("Email not sent: " + e.getMessage());
+        }
     }
 }

@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-08T15:43:51 IST" name="TimesheetSuite" finished-at="2025-07-08T15:45:32 IST" duration-ms="101619">
+  <suite started-at="2025-07-09T20:13:49 IST" name="TimesheetSuite" finished-at="2025-07-09T20:15:52 IST" duration-ms="122844">
     <groups>
     </groups>
-    <test started-at="2025-07-08T15:43:51 IST" name="Employee Timesheet Flow" finished-at="2025-07-08T15:44:43 IST" duration-ms="52179">
+    <test started-at="2025-07-09T20:13:49 IST" name="Employee Timesheet Flow" finished-at="2025-07-09T20:14:53 IST" duration-ms="64184">
       <class name="testcases.logoutTest">
-        <test-method signature="testLogout()[pri:0, instance:testcases.logoutTest@77f80c04]" started-at="2025-07-08T15:44:39 IST" name="testLogout" finished-at="2025-07-08T15:44:43 IST" duration-ms="4303" status="PASS">
+        <test-method signature="testLogout()[pri:0, instance:testcases.logoutTest@77f80c04]" started-at="2025-07-09T20:14:49 IST" name="testLogout" finished-at="2025-07-09T20:14:53 IST" duration-ms="4282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
       </class> <!-- testcases.logoutTest -->
       <class name="testcases.timesheetTest">
-        <test-method signature="testCreateTimesheet()[pri:0, instance:testcases.timesheetTest@4e3958e7]" started-at="2025-07-08T15:43:58 IST" name="testCreateTimesheet" finished-at="2025-07-08T15:44:38 IST" duration-ms="40519" status="FAIL">
+        <test-method signature="testCreateTimesheet()[pri:0, instance:testcases.timesheetTest@4e3958e7]" started-at="2025-07-09T20:13:56 IST" name="testCreateTimesheet" finished-at="2025-07-09T20:14:49 IST" duration-ms="52503" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//lightning-base-combobox-item[@data-value='QA']"}
@@ -22,9 +22,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.31.0', revision: '1ef9f18787*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5a3015ce962a5aae0dcd7609bf5a77a5, findElement {value=//lightning-base-combobox-item[@data-value='QA'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56125/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5a3015ce962a5aae0dcd7609bf5a77a5]]>
+Command: [5c0c28d61aa11deae8c6d0b9984012e6, findElement {using=xpath, value=//lightning-base-combobox-item[@data-value='QA']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57491}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57491/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c0c28d61aa11deae8c6d0b9984012e6]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//lightning-base-combobox-item[@data-value='QA']"}
@@ -33,9 +33,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.31.0', revision: '1ef9f18787*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5a3015ce962a5aae0dcd7609bf5a77a5, findElement {value=//lightning-base-combobox-item[@data-value='QA'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56125/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5a3015ce962a5aae0dcd7609bf5a77a5
+Command: [5c0c28d61aa11deae8c6d0b9984012e6, findElement {using=xpath, value=//lightning-base-combobox-item[@data-value='QA']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57491}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57491/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c0c28d61aa11deae8c6d0b9984012e6
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -86,21 +86,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- testCreateTimesheet -->
       </class> <!-- testcases.timesheetTest -->
       <class name="testcases.loginTest">
-        <test-method signature="testLogin()[pri:0, instance:testcases.loginTest@37271612]" started-at="2025-07-08T15:43:51 IST" name="testLogin" finished-at="2025-07-08T15:43:58 IST" duration-ms="7063" status="PASS">
+        <test-method signature="testLogin()[pri:0, instance:testcases.loginTest@37271612]" started-at="2025-07-09T20:13:49 IST" name="testLogin" finished-at="2025-07-09T20:13:56 IST" duration-ms="7211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
       </class> <!-- testcases.loginTest -->
     </test> <!-- Employee Timesheet Flow -->
-    <test started-at="2025-07-08T15:44:43 IST" name="Manager Approval Flow" finished-at="2025-07-08T15:45:32 IST" duration-ms="48810">
+    <test started-at="2025-07-09T20:14:53 IST" name="Manager Approval Flow" finished-at="2025-07-09T20:15:52 IST" duration-ms="58319">
       <class name="testcases.logoutTest">
-        <test-method signature="testLogout()[pri:0, instance:testcases.logoutTest@69fb6037]" started-at="2025-07-08T15:45:28 IST" name="testLogout" finished-at="2025-07-08T15:45:32 IST" duration-ms="4346" status="PASS">
+        <test-method signature="testLogout()[pri:0, instance:testcases.logoutTest@69fb6037]" started-at="2025-07-09T20:15:47 IST" name="testLogout" finished-at="2025-07-09T20:15:52 IST" duration-ms="4238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
       </class> <!-- testcases.logoutTest -->
       <class name="testcases.managerTimesheetApprovalTest">
-        <test-method signature="approveTimesheet()[pri:0, instance:testcases.managerTimesheetApprovalTest@5f16132a]" started-at="2025-07-08T15:44:58 IST" name="approveTimesheet" finished-at="2025-07-08T15:45:28 IST" duration-ms="29926" status="FAIL">
+        <test-method signature="approveTimesheet()[pri:0, instance:testcases.managerTimesheetApprovalTest@5f16132a]" started-at="2025-07-09T20:15:14 IST" name="approveTimesheet" finished-at="2025-07-09T20:15:47 IST" duration-ms="33183" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//tbody[@class='slds-scrollable_y']//a"}
@@ -109,9 +109,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.31.0', revision: '1ef9f18787*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5a3015ce962a5aae0dcd7609bf5a77a5, findElement {value=//tbody[@class='slds-scrollable_y']//a, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56125/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5a3015ce962a5aae0dcd7609bf5a77a5]]>
+Command: [5c0c28d61aa11deae8c6d0b9984012e6, findElement {using=xpath, value=//tbody[@class='slds-scrollable_y']//a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57491}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57491/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c0c28d61aa11deae8c6d0b9984012e6]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//tbody[@class='slds-scrollable_y']//a"}
@@ -120,9 +120,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.31.0', revision: '1ef9f18787*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5a3015ce962a5aae0dcd7609bf5a77a5, findElement {value=//tbody[@class='slds-scrollable_y']//a, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56125/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5a3015ce962a5aae0dcd7609bf5a77a5
+Command: [5c0c28d61aa11deae8c6d0b9984012e6, findElement {using=xpath, value=//tbody[@class='slds-scrollable_y']//a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\LAKSHM~1.HAR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57491}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57491/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c0c28d61aa11deae8c6d0b9984012e6
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -173,15 +173,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- approveTimesheet -->
       </class> <!-- testcases.managerTimesheetApprovalTest -->
       <class name="testcases.managerLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.managerLoginTest@dd0c991]" started-at="2025-07-08T15:43:39 IST" name="setUp" finished-at="2025-07-08T15:43:51 IST" duration-ms="11347" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.managerLoginTest@dd0c991]" started-at="2025-07-09T20:13:36 IST" name="setUp" finished-at="2025-07-09T20:13:49 IST" duration-ms="12323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testManagerLogin()[pri:0, instance:testcases.managerLoginTest@dd0c991]" started-at="2025-07-08T15:44:43 IST" name="testManagerLogin" finished-at="2025-07-08T15:44:58 IST" duration-ms="14288" status="PASS">
+        <test-method signature="testManagerLogin()[pri:0, instance:testcases.managerLoginTest@dd0c991]" started-at="2025-07-09T20:14:53 IST" name="testManagerLogin" finished-at="2025-07-09T20:15:14 IST" duration-ms="20723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testManagerLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.managerLoginTest@dd0c991]" started-at="2025-07-08T15:45:32 IST" name="tearDown" finished-at="2025-07-08T15:45:57 IST" duration-ms="25073" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.managerLoginTest@dd0c991]" started-at="2025-07-09T20:15:52 IST" name="tearDown" finished-at="2025-07-09T20:16:02 IST" duration-ms="10111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

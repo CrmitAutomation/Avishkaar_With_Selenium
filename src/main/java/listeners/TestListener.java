@@ -14,13 +14,13 @@ import utils.ScreenshotUtils;
 
 public class TestListener implements ITestListener {
 
-    // Thread-safe ExtentTest for parallel tests (optional)
+    // Thread-safe ExtentTest for parallel execution (optional)
     private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
     @Override
     public void onTestStart(ITestResult result) {
-        // Create test once — this avoids duplicate entries
-        ExtentTest test = ExtentReportUtil.getReportInstance().createTest(result.getMethod().getMethodName());
+        ExtentTest test = ExtentReportUtil.getReportInstance()
+                .createTest(result.getMethod().getMethodName());
         extentTest.set(test);
     }
 
@@ -34,26 +34,26 @@ public class TestListener implements ITestListener {
         WebDriver driver = null;
         try {
             Object currentClass = result.getInstance();
-            java.lang.reflect.Field field = result.getTestClass().getRealClass()
-                                                  .getSuperclass()
-                                                  .getDeclaredField("driver");
+            java.lang.reflect.Field field = result.getTestClass()
+                    .getRealClass()
+                    .getSuperclass()
+                    .getDeclaredField("driver");
             field.setAccessible(true);
             driver = (WebDriver) field.get(currentClass);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        String testName = result.getMethod().getMethodName();
-        String screenshotPath = ScreenshotUtils.captureScreenshot(driver, testName);
-
         try {
+            String base64Screenshot = ScreenshotUtils.captureScreenshotBase64(driver);
             extentTest.get().fail("Test Failed: " + result.getThrowable(),
-                    MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+                    MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot, "Failure_Image").build());
         } catch (Exception e) {
-            extentTest.get().fail("Test Failed, but screenshot attachment failed: " + result.getThrowable());
+            extentTest.get().fail("Test Failed, but screenshot capture failed: " + result.getThrowable());
             e.printStackTrace();
         }
     }
+
 
     @Override
     public void onTestSkipped(ITestResult result) {
